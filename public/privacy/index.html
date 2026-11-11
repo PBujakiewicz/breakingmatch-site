@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polityka prywatności / Privacy Policy — Breaking Match</title>
+  <meta name="description" content="Polityka prywatności gry Breaking Match: Absurd News Puzzle. Privacy Policy of Breaking Match: Absurd News Puzzle.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">Breaking<span>Match</span></a>
+    <nav><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+  </header>
+  <main>
+    <!-- Źródło danych: breakingmatch-game/privacy/data-inventory.yaml — zmiany najpierw tam. -->
+    <h1 id="pl">Polityka prywatności</h1>
+    <p class="meta">Gra „Breaking Match: Absurd News Puzzle” · Ostatnia aktualizacja: 8 listopada 2026 r.</p>
+    <p class="lang"><a href="#pl">Polski</a><a href="#en">English</a></p>
+
+    <h2>1. Administrator danych</h2>
+    <p>Administratorem danych jest <strong>BatIT Paweł Bujakiewicz</strong>, {{ADRES_JDG}}, NIP {{NIP}}. Kontakt w sprawach danych osobowych: <a href="mailto:kontakt@breakingmatch.com">kontakt@breakingmatch.com</a>.</p>
+
+    <h2>2. Jakie dane zbieramy i po co</h2>
+    <p>Gra nie wymaga zakładania konta i nie prosi o imię, adres e-mail ani numer telefonu. Przy pierwszym uruchomieniu tworzy się anonimowe konto z losowym identyfikatorem.</p>
+    <table>
+      <thead><tr><th>Dane</th><th>Cel</th><th>Podstawa prawna (RODO)</th><th>Okres przechowywania</th></tr></thead>
+      <tbody>
+        <tr><td>Losowy identyfikator gracza (Firebase Authentication)</td><td>Zapis postępu bez zakładania konta</td><td>Art. 6 ust. 1 lit. b — świadczenie usługi</td><td>Przez cały okres działania gry — do usunięcia na Twoje żądanie</td></tr>
+        <tr><td>Postęp w grze: ukończone plansze, gwiazdki, bonusy (Cloud Firestore)</td><td>Zapis i synchronizacja postępu</td><td>Art. 6 ust. 1 lit. b</td><td>Jak wyżej</td></tr>
+        <tr><td>Statystyki użycia: zdarzenia w grze (np. ukończenie planszy, użycie „Udostępnij finał”), model urządzenia, wersja systemu, kraj (Google Analytics for Firebase)</td><td>Ulepszanie gry i ocena, które poziomy działają</td><td>Art. 6 ust. 1 lit. a — Twoja zgoda (pytamy przy pierwszym uruchomieniu; bez zgody statystyki nie są zbierane)</td><td>2 miesiące</td></tr>
+        <tr><td>Identyfikator instancji aplikacji (Firebase Remote Config)</td><td>Pobranie aktualnej listy poziomów i ustawień</td><td>Art. 6 ust. 1 lit. b</td><td>Zgodnie z zasadami Google</td></tr>
+        <tr><td>Token integralności urządzenia i aplikacji (Firebase App Check, Play Integrity)</td><td>Ochrona przed nadużyciami i oszustwami</td><td>Art. 6 ust. 1 lit. f — bezpieczeństwo usługi</td><td>Zgodnie z zasadami Google</td></tr>
+        <tr><td>Raporty błędów: opis techniczny błędu, model urządzenia, wersja systemu i gry, identyfikator gracza, ostatnie zdarzenia techniczne (Sentry). Bez adresu IP i danych kontaktowych.</td><td>Wykrywanie i naprawa błędów</td><td>Art. 6 ust. 1 lit. f — działanie i bezpieczeństwo gry</td><td>30 dni</td></tr>
+        <tr><td>Zgłoszenie z przycisku „Zgłoś problem”: opis, który wpiszesz, i dane techniczne jak wyżej (Sentry)</td><td>Obsługa zgłoszenia</td><td>Art. 6 ust. 1 lit. f</td><td>30 dni</td></tr>
+        <tr><td>Wiadomość e-mail, jeśli do nas napiszesz</td><td>Odpowiedź na wiadomość</td><td>Art. 6 ust. 1 lit. f</td><td>Do zakończenia sprawy, maks. 12 miesięcy</td></tr>
+      </tbody>
+    </table>
+    <p>W opisie zgłoszenia prosimy nie podawać danych osobowych. Przycisk „Udostępnij finał” przekazuje obraz do aplikacji, którą sam wybierzesz — ten obraz nie trafia do nas.</p>
+    <p>Gra w obecnej wersji <strong>nie wyświetla reklam, nie ma zakupów w aplikacji i nie sprzedaje danych</strong>. Nie podejmujemy wobec Ciebie decyzji opartych wyłącznie na zautomatyzowanym przetwarzaniu, w tym profilowania.</p>
+
+    <h2>3. Strona breakingmatch.com</h2>
+    <p>Strona nie używa plików cookie ani narzędzi analitycznych. Jest hostowana przez Cloudflare, który przetwarza techniczne dane połączenia (m.in. adres IP) w celu dostarczenia strony i ochrony przed atakami.</p>
+
+    <h2>4. Odbiorcy danych</h2>
+    <ul>
+      <li><strong>Google Ireland Ltd. / Google LLC</strong> — Firebase (konto, postęp, statystyki, ustawienia, App Check). Postęp gry przechowujemy w regionie Unii Europejskiej.</li>
+      <li><strong>Functional Software, Inc. (Sentry)</strong> — raporty błędów i zgłoszenia, przechowywane w regionie UE (Niemcy).</li>
+      <li><strong>Cloudflare, Inc.</strong> — hosting strony i obsługa poczty na domenie.</li>
+    </ul>
+    <p>Część usług może przetwarzać dane poza Europejskim Obszarem Gospodarczym (USA). Podstawą przekazania jest decyzja Komisji Europejskiej w sprawie ram ochrony danych UE–USA (Data Privacy Framework) lub standardowe klauzule umowne.</p>
+
+    <h2>5. Twoje prawa</h2>
+    <p><strong>Zgoda na statystyki</strong> jest dobrowolna — gra działa tak samo bez niej. Możesz ją w każdej chwili wycofać w ustawieniach gry; wycofanie nie wpływa na zgodność z prawem wcześniejszego przetwarzania.</p>
+    <p>Masz prawo do dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie. Masz też prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl">uodo.gov.pl</a>).</p>
+    <p><strong>Jak usunąć dane:</strong> napisz na <a href="mailto:kontakt@breakingmatch.com">kontakt@breakingmatch.com</a> i podaj identyfikator gracza widoczny w ustawieniach gry. Ponieważ konto jest anonimowe, bez tego identyfikatora nie możemy powiązać danych z Tobą. Usunięcie gry z telefonu nie usuwa danych z serwera.</p>
+
+    <h2>6. Dzieci</h2>
+    <p>Gra nie jest skierowana do dzieci poniżej 13 lat i nie zbieramy świadomie danych dzieci. Jeśli uważasz, że dziecko przekazało nam dane, napisz do nas — usuniemy je.</p>
+
+    <h2>7. Bezpieczeństwo</h2>
+    <p>Dane przesyłamy wyłącznie szyfrowanym połączeniem (HTTPS). Dostęp do systemów ma tylko administrator, z uwierzytelnianiem wieloskładnikowym. Raporty błędów są oczyszczane z danych osobowych przed zapisem.</p>
+
+    <h2>8. Zmiany polityki</h2>
+    <p>O istotnych zmianach (np. dodaniu reklam lub zakupów w aplikacji) poinformujemy w grze przed ich wprowadzeniem. Historia zmian jest publicznie dostępna w repozytorium <a href="https://github.com/PBujakiewicz/breakingmatch-site">breakingmatch-site</a>.</p>
+
+    <hr>
+
+    <h1 id="en" lang="en">Privacy Policy</h1>
+    <div lang="en">
+    <p class="meta">“Breaking Match: Absurd News Puzzle” · Last updated: 8 November 2026</p>
+    <p class="lang"><a href="#pl">Polski</a><a href="#en">English</a></p>
+
+    <h2>1. Data controller</h2>
+    <p>The data controller is <strong>BatIT Paweł Bujakiewicz</strong>, {{ADRES_JDG}}, Poland, Tax ID (NIP) {{NIP}}. Privacy contact: <a href="mailto:kontakt@breakingmatch.com">kontakt@breakingmatch.com</a>.</p>
+
+    <h2>2. What we collect and why</h2>
+    <p>The game does not require an account and never asks for your name, email address or phone number. On first launch it creates an anonymous account with a random identifier.</p>
+    <table>
+      <thead><tr><th>Data</th><th>Purpose</th><th>Legal basis (GDPR)</th><th>Retention</th></tr></thead>
+      <tbody>
+        <tr><td>Random player identifier (Firebase Authentication)</td><td>Saving progress without an account</td><td>Art. 6(1)(b) — providing the service</td><td>For as long as the game is available — until you request deletion</td></tr>
+        <tr><td>Game progress: completed boards, stars, bonuses (Cloud Firestore)</td><td>Saving and syncing progress</td><td>Art. 6(1)(b)</td><td>As above</td></tr>
+        <tr><td>Usage statistics: in-game events (e.g. board completed, “Share ending” used), device model, OS version, country (Google Analytics for Firebase)</td><td>Improving the game and learning which levels work</td><td>Art. 6(1)(a) — your consent (asked on first launch; no statistics are collected without it)</td><td>2 months</td></tr>
+        <tr><td>App instance identifier (Firebase Remote Config)</td><td>Fetching the current level list and settings</td><td>Art. 6(1)(b)</td><td>Per Google's policies</td></tr>
+        <tr><td>Device and app integrity token (Firebase App Check, Play Integrity)</td><td>Preventing abuse and fraud</td><td>Art. 6(1)(f) — service security</td><td>Per Google's policies</td></tr>
+        <tr><td>Error reports: technical error details, device model, OS and game version, player identifier, recent technical events (Sentry). No IP address or contact details.</td><td>Finding and fixing bugs</td><td>Art. 6(1)(f) — operation and security of the game</td><td>30 days</td></tr>
+        <tr><td>“Report a problem” submissions: the description you type and technical data as above (Sentry)</td><td>Handling your report</td><td>Art. 6(1)(f)</td><td>30 days</td></tr>
+        <tr><td>Your email, if you write to us</td><td>Replying to you</td><td>Art. 6(1)(f)</td><td>Until the matter is closed, max. 12 months</td></tr>
+      </tbody>
+    </table>
+    <p>Please do not include personal data in problem reports. The “Share ending” button passes an image to the app you choose — the image is not sent to us.</p>
+    <p>The current version of the game <strong>shows no ads, has no in-app purchases and does not sell data</strong>. We do not make decisions about you based solely on automated processing, including profiling.</p>
+
+    <h2>3. The breakingmatch.com website</h2>
+    <p>The website uses no cookies and no analytics. It is hosted by Cloudflare, which processes technical connection data (including IP addresses) to deliver the site and protect it from attacks.</p>
+
+    <h2>4. Recipients</h2>
+    <ul>
+      <li><strong>Google Ireland Ltd. / Google LLC</strong> — Firebase (account, progress, statistics, settings, App Check). Game progress is stored in the European Union.</li>
+      <li><strong>Functional Software, Inc. (Sentry)</strong> — error reports and problem reports, stored in the EU (Germany).</li>
+      <li><strong>Cloudflare, Inc.</strong> — website hosting and email for our domain.</li>
+    </ul>
+    <p>Some services may process data outside the European Economic Area (USA). Transfers rely on the European Commission's adequacy decision for the EU–U.S. Data Privacy Framework or on Standard Contractual Clauses.</p>
+
+    <h2>5. Your rights</h2>
+    <p><strong>Consent to statistics</strong> is optional — the game works the same without it. You can withdraw it at any time in the game settings; withdrawal does not affect the lawfulness of earlier processing.</p>
+    <p>You have the right to access, rectify and erase your data, to restrict processing, to data portability and to object to processing based on legitimate interest. You may also lodge a complaint with the Polish supervisory authority, the President of the Personal Data Protection Office (UODO, ul. Stawki 2, 00-193 Warsaw, <a href="https://uodo.gov.pl">uodo.gov.pl</a>), or with the authority in your country.</p>
+    <p><strong>How to delete your data:</strong> email <a href="mailto:kontakt@breakingmatch.com">kontakt@breakingmatch.com</a> with the player ID shown in the game settings. Because the account is anonymous, we cannot link data to you without it. Uninstalling the game does not delete data from our servers.</p>
+
+    <h2>6. Children</h2>
+    <p>The game is not directed at children under 13 and we do not knowingly collect children's data. If you believe a child has provided us with data, contact us and we will delete it.</p>
+
+    <h2>7. Security</h2>
+    <p>Data is transmitted only over encrypted connections (HTTPS). Only the administrator has access to our systems, protected by multi-factor authentication. Error reports are scrubbed of personal data before storage.</p>
+
+    <h2>8. Changes</h2>
+    <p>We will announce significant changes (for example adding ads or in-app purchases) in the game before they take effect. The full change history is public in the <a href="https://github.com/PBujakiewicz/breakingmatch-site">breakingmatch-site</a> repository.</p>
+    </div>
+  </main>
+  <footer>© 2026 BatIT Paweł Bujakiewicz · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a></footer>
+</body>
+</html>

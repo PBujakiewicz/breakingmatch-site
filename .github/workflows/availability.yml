@@ -1,0 +1,55 @@
+# Google Play odrzuca/zawiesza aplikację, gdy link do polityki prywatności nie działa.
+name: availability
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_run:
+    workflows: [deploy]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sprawdź /privacy i /terms
+        id: probe
+        run: |
+          set -u
+          fail=""
+          check() {
+            local url="$1" text="$2"
+            body=$(curl -fsSL --max-time 20 --retry 3 --retry-delay 10 "$url") || { fail="$fail\n- $url: brak odpowiedzi 200"; return; }
+            grep -q "$text" <<<"$body" || fail="$fail\n- $url: brak tekstu \"$text\""
+          }
+          check https://breakingmatch.com/privacy/ "Polityka prywatności"
+          check https://breakingmatch.com/privacy/ "Privacy Policy"
+          check https://breakingmatch.com/terms/ "Regulamin"
+          check https://breakingmatch.com/terms/ "Terms of Service"
+          if [ -n "$fail" ]; then
+            printf "Problemy:%b\n" "$fail" | tee report.md
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Issue przy błędzie
+        if: steps.probe.outputs.failed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          title="Strona: /privacy lub /terms niedostępne"
+          existing=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file report.md
+          else
+            gh label create auto-bug --color B60205 --force >/dev/null
+            gh label create P0 --color 000000 --force >/dev/null
+            gh issue create --title "$title" --body-file report.md --label auto-bug --label P0
+          fi
+          exit 1
